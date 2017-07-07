@@ -192,7 +192,9 @@ a.linkmail:hover {
   Portfolio
   **********/
 
-
+#portfolio-img {
+  margin: 5%;
+}
 
   /**********
   Contact
@@ -215,5 +217,11 @@ a.linkmail:hover {
     #row2 > div:first-child {
       height: 300px;
       position: static;
+    }
+    #img-1, #img-2 {
+      width: 80%;
+    }
+    #logo {
+      padding-top: 25%;
     }
   }
