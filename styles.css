@@ -165,9 +165,11 @@ a.linkmail:hover {
   *******/
   #row2 {
     display: flex;
+
   }
   #row2 > div:first-child {
     position: sticky;
+    position: -webkit-sticky;
     top: 0;
     height: calc(100vh - 2px);
     background-color: #84C49A;
