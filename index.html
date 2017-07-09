@@ -6,6 +6,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+    <link rel="stylesheet" type="text/css" href="devicon-colors.css">
+    <script src="https://use.fontawesome.com/8f68370d8a.js"></script>
+    <style>
+    body {
+        font-family: "Lato", sans-serif;
+    }
+
+    .sidenav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #84C49A;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+    }
+
+    .sidenav a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #EDEDED;
+        display: block;
+        transition: 0.3s;
+    }
+
+    .sidenav a:hover, .offcanvas a:focus{
+        color: #F8A69E;
+    }
+
+    .sidenav .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+    }
+
+    #main {
+        transition: margin-left .5s;
+        padding: 16px;
+        right: 0;
+    }
+    @media screen and (min-width: 0px) and (max-width: 700px) {
+      #main span{ display: block; }  /* show it on small screens */
+    }
+
+    @media screen and (min-width: 701px) and (max-width: 15000px) {
+      #main span { display: none; }   /* hide it elsewhere */
+    }
+    @media screen and (max-height: 450px) {
+      .sidenav {padding-top: 15px;}
+      .sidenav a {font-size: 18px;}
+    }
+    </style>
   </head>
   <body>
 
@@ -14,24 +73,35 @@
     <div id="row1">
       <nav>
         <div id="logo">
-        <img id="img-1" src="images/wylieweblogo1.png">
-        <img class="gHover" id="img-2"src="images/wylieweblogo2.png">
-        <ul>
-          <li><a class="link1" href="#about">ABOUT</a></li>
-          <li style="color: #000; font-size: 1.3em">/</li>
-          <li><a class="link2" href="#portfolio"> PORTFOLIO</a></li>
-          <li style="color: #000; font-size: 1.3em">/</li>
-          <li><a class="link3" href="#contact"> CONTACT</a></li>
-        </ul>
-      </div>
+          <img id="img-1" src="images/wylieweblogo1.png">
+          <img class="gHover" id="img-2"src="images/wylieweblogo2.png">
+          <ul>
+            <li><a class="link1" href="#about">ABOUT</a></li>
+            <li style="color: #000; font-size: 1.3em">/</li>
+            <li><a class="link2" href="#portfolio"> PORTFOLIO</a></li>
+            <li style="color: #000; font-size: 1.3em">/</li>
+            <li><a class="link3" href="#contact"> CONTACT</a></li>
+          </ul>
+        </div>
       </nav>
     </div>
 
   <!-- ******ABOUT****** -->
     <div id="row2">
       <div>
-          <img class='row-img' src="images/about4.png">
+        <img class='row-img' src="images/about4.png">
+        <div id="mySidenav" class="sidenav">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <a href="#about">About</a>
+          <a href="#portfolio">Portfolio</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div id="main" style="position: absolute;">
+          <span style="font-size:30px;cursor:pointer" onclick="openNav()"><i class="fa fa-bars" style="color: #EDEDED;" aria-hidden="true"></i> </span>
+        </div>
       </div>
+
+
       <div>
         <div class='about-content' id="about">
           <p>
@@ -44,17 +114,36 @@
             I realized how interested I was in technology and decided to pursue
             a career as a full-stack developer.
             <br><br>
+            <h3 style="color: #F8A69E">How I got here:</h3>
+            My love for the internet and educational apps motivated me to study software development.
             I’ve seen how wonderful a new educational app can be to a student struggling to learn how to read.
             I loved learning about apps as they came out and figuring out how to best implement them in the classroom.
-            <h3 style="color: #F8A69E">How I got here:</h3>
-            I think my love for the internet and educational apps motivated me to study software development.
             I enjoy designing from scratch and creating something unique.
             Currently I am studying at Digital Crafts, and so far it's been a great experience.
-            <h3 style="color: #F8A69E">What I am up to now:</h3>
-            I am working on a couple ideas for educational apps.  One is a web app to teach elementary
-            students the fundamentals of poetry and how to put words together to create something
-            beautiful. It will be interactive and the goal is to have the students write a poem with guidance from the app.
-            <br>
+            <h3 style="color: #F8A69E">Skills:</h3>
+              <div>
+                <h1 style="font-size: 4em;"><i class="devicon-bootstrap-plain-wordmark colored"></i>
+                <i class="devicon-html5-plain-wordmark colored"></i>
+                <i class="devicon-css3-plain-wordmark colored"></i>
+                <i class="devicon-wordpress-plain colored"></i>
+                <i class="devicon-javascript-plain colored"></i>
+                <i class="devicon-jquery-plain-wordmark colored"></i>
+                <i class="devicon-nodejs-plain-wordmark colored"></i>
+                <i class="devicon-photoshop-plain colored"></i></h1>
+              </div>
+            <h3 style="color: #F8A69E">What I am Learning:</h3>
+              <div>
+                <h1 style="font-size: 4em;">
+                  <i class="devicon-python-plain-wordmark colored"></i>
+                  <i class="devicon-django-plain-wordmark colored"></i>
+                  <i class="devicon-sass-original colored"></i>
+                  <i class="devicon-react-plain colored"></i>
+                  <i class="devicon-redux-plain colored"></i>
+                  <i class="devicon-postgresql-plain colored"></i>
+                  <i class="devicon-illustrator-plain colored"></i>
+                </h1>
+              </div>
+
             <img src="images/signature.png">
           </p>
         </div>
@@ -65,8 +154,15 @@
     <div id="row2">
       <div id="portfolio"style="background-color: #F8A69E">
         <img class ="row-img" src="images/portfolio4.png">
-        <!-- <a href=""class="link-resume"><img class="row-img" style="width: 25%; position: absolute; top: 100px; left: 100px;"src="images/myresume.png"></a> -->
-        <!-- <a class="featured-button" href="#featured-project"><img src="images/featured.png"></a> -->
+        <div id="mySidenav" class="sidenav">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <a href="#about">About</a>
+          <a href="#portfolio">Portfolio</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div id="main" style="position: absolute;">
+          <span style="font-size:30px;cursor:pointer" onclick="openNav()"><i class="fa fa-bars" style="color: #EDEDED;" aria-hidden="true"></i> </span>
+        </div>
       </div>
       <div>
         <div id="portfolio-img">
@@ -74,22 +170,22 @@
           <div>
             <img  src="images/blackjack.png" style="width: 100%;">
               <div style="display: inline; text-align: center;">
+                <h3 style="color: #F8A69E"> LIVE </h3>
                 <h3 style="color: #F8A69E"> DEMO </h3>
-                <h3 style="color: #F8A69E"> Walk-through </h3>
               </div>
           </div> <br><br>
           <div>
             <img  src="images/blackjack.png" style="width: 100%;">
               <div style="display: inline; text-align: center;">
+                <h3 style="color: #F8A69E"> LIVE </h3>
                 <h3 style="color: #F8A69E"> DEMO </h3>
-                <h3 style="color: #F8A69E"> Walk-through </h3>
               </div>
           </div> <br> <br>
           <div>
             <img  src="images/blackjack.png" style="width: 100%;">
               <div style="display: inline; text-align: center;">
+                <h3 style="color: #F8A69E"> LIVE </h3>
                 <h3 style="color: #F8A69E"> DEMO </h3>
-                <h3 style="color: #F8A69E"> Walk-through </h3>
               </div>
             </div>
 
@@ -101,6 +197,15 @@
     <div id="row2">
       <div style="background-color: #C4C029">
         <img class="row-img" src="images/contact4.png">
+        <div id="mySidenav" class="sidenav">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <a href="#about">About</a>
+          <a href="#portfolio">Portfolio</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div id="main" style="position: absolute;">
+          <span style="font-size:30px;cursor:pointer" onclick="openNav()"><i class="fa fa-bars" style="color: #EDEDED;" aria-hidden="true"></i> </span>
+        </div>
       </div>
         <div>
           <a id="contact"> </a>
@@ -108,16 +213,33 @@
               <h3><strong>I would love to hear from you!</strong></h3>
               <p> Please send me an email so we can chat all things web. </p>
               <h3> <a class="linkmail" href="mailto:rondawylie@gmail.com" target="_top" style="color: #C4C029"> Send Mail </a></h3>
-
               <img src="images/signature.png">
+              <h1 style="font-size: 3.5em;">
+                <a target="_blank" href="https://github.com/rwylie" style="text-decoration: none;"><i class="devicon-github-plain-wordmark colored"></i></a>
+                <a target="_blank" href="https://www.linkedin.com/in/ronda-wylie-08ab6279/" style="color: #84C49A; text-decoration: none;">in</a>
+              </h1>
             </div>
         </div>
     </div>
 
+<!-- jquery script -->
     <script src="//code.jquery.com/jquery-3.2.1.min.js"
         integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
         crossorigin="anonymous"></script>
 
+<!-- main script -->
     <script src="main.js"></script>
+
+    <script>
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+    }
+
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("main").style.marginLeft= "0";
+    }
+    </script>
   </body>
 </html>
